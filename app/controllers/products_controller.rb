@@ -16,8 +16,11 @@ class ProductsController < ApplicationController
         format.json { render json: @product }
       else
         format.html { render action: "new" } 
-        format.json { render jsonn: @product.errors, status: :unprocessable_entity }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end    
   end
+  def new 
+    @product = Product.new
+  end 
 end
