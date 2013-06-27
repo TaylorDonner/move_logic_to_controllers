@@ -7,5 +7,8 @@
       Product Name: "<%= product.name %>" costs $<%= product.price %>  |  
 	  Sold by <%= product.user.name if product.user.present? %>    
     </li>
+  <%= link_to 'Product', product %>
+  <%= link_to 'Destroy', product, method: 'delete', data: { confirm: 'Are you sure?' } %>
   <% end %>
+  
 </ul>
